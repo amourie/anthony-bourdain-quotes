@@ -1,25 +1,53 @@
 body {
-  /*text-align: center;*/
   background-color: #2f4658;
   color: white;
-  font-family: 'Playfair Display', serif;
-  background-image: url('../img/140225144422-anthony-bourdain-profile-full-169.jpg');
+  background-image: url('../img/bourdain-default-background.jpg');
   background-repeat: no-repeat;
   background-position: top right;
-
+  font-family: 'Open Sans Condensed', sans-serif;
 }
-
+header {
+  width: 100%;
+  height:45px;
+  position: absolute;
+  top: 0px;
+  background-color: #010312;
+}
+header p {
+  display: block;
+  float: right;
+  margin-right: 15px;
+}
+footer {
+  width: 100%;
+  height:45px;
+  position: absolute;
+  bottom: 0px;
+  background-color: #010312;
+  display: table-cell;
+}
+footer p {
+  display: table-cell;
+  vertical-align: top;
+  right: 20px;
+  position: absolute;
+}
+.fa {
+	margin-right:15px;
+	color: #fff;
+}
+.fa:hover {
+  color: #42667d;
+}
 .container {
-
-
   width:100%;
   height:100%;
+  font-family: 'Playfair Display', serif;
 }
 #quote-box {
   position: absolute;
   top: 17%;
   left: 7%;
-
   width: 50%;
   line-height: .5;
 }
@@ -67,7 +95,6 @@ body {
   content: ", ";
   font-style: normal;
 }
-
 #loadQuote {
   position: fixed;
   width: 12em;
@@ -89,7 +116,6 @@ body {
 #loadQuote:focus {
   outline: none;
 }
-
 @media (max-width: 420px) {
   .quote {
     font-size: 2.5rem;

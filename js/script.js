@@ -59,7 +59,16 @@ var quotes = [
   source: "Anthony Bourdain",
   citation: "",//If there is no known publication, do not include this property on the object.
   year: "" //If there is no known date, then do not include this property on the object.
+},
+{
+  quote: "I wanted kicks - the kind of melodramatic thrills and chills I'd yearned for since childhood, the kind of adventure I'd found as a little boy in the pages of my Tintin comic books.",
+  source: "Anthony Bourdain",
+  citation: "",//If there is no known publication, do not include this property on the object.
+  year: "" //If there is no known date, then do not include this property on the object.
 }
+
+
+
 ];//end of quotes objArray
 
 
@@ -71,7 +80,9 @@ function printQuote() {
   console.log("button clicked");
   //printQuote calls the getRandomQuote function and stores the returned quote object in a variable
   var currentQuoteObj = randomQuote();
-//console.log("quote is " + currentQuoteObj.quote);
+console.log("quote is " + currentQuoteObj.quote);
+console.log("source is " + currentQuoteObj.source);
+
 //console.log("citation is " + currentQuoteObj.citation);
 //console.log("year is " + currentQuoteObj.year);
   $('#quote-box p.quote').text(currentQuoteObj.quote);
@@ -86,9 +97,11 @@ function randomQuote()
 {
   var randomNumber = Math.floor((Math.random() * 10));
   console.log(randomNumber);
-  var selectedQuote = quotes[randomNumber];
-  console.log(selectedQuote);//logs selected Object
-  return selectedQuote;
+  var selectedQuoteObj = quotes[randomNumber];
+  console.log(selectedQuoteObj);//logs selected Object
+  return selectedQuoteObj;
 
 
 }
+//print copyright date in footer
+$('#date').text("Copyright " + new Date().getFullYear());
