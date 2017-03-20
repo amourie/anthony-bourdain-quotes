@@ -87,8 +87,8 @@ var quotes = [
 
 return quotes;
 }
-
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+printQuote();
+document.getElementById('loadQuoteButton').addEventListener("click", printQuote, false);
 
 function printQuote() {
 
@@ -118,6 +118,8 @@ function randomQuote()
   var randomNumber = Math.floor((Math.random() * arrLength));
   var prevRandomNumber = randomNumber;
   console.log(randomNumber);
+  selectedQuoteObj = quotes[randomNumber];
+  console.log(selectedQuoteObj);//logs selected Object
   if (arrLength > 0) {
     console.log("arrLength: " + arrLength);
     quotes.splice(randomNumber, 1);
@@ -128,10 +130,10 @@ function randomQuote()
     quotes = initArray();
     console.log("after resetting length " + quotes.length);
   }
-  selectedQuoteObj = quotes[randomNumber];
-  console.log(selectedQuoteObj);//logs selected Object
+
+
   return selectedQuoteObj;
 
 }
 //print copyright date in footer
-$('#date').text("Copyright " + new Date().getFullYear());
+$('#footer-date').text("Copyright " + new Date().getFullYear());
