@@ -89,15 +89,12 @@ function printQuote() {
   console.log("year is: " + currentQuoteObj.year);
   $('#quote-box p.quoteCopy').text(currentQuoteObj.quote);
   $('#quote-box p.quoteSource').text(" - " + currentQuoteObj.source);
-
-
 }//end function printQuote
 
 /*randomQuote Function generates a random number to select a valid array slot from the quotes [] array. It returns the selected quote object in the quotes [] array.
 It removes the used / returned item from the quotes array and adjusts the random number range. Resets the array by calling init Array if the quotes []  array is empty*/
 function randomQuote()
 {
-
   var arrLength = quotes.length - 1;
   var selectedQuoteObj = "";
   var randomNumber = Math.floor((Math.random() * arrLength));
@@ -115,6 +112,18 @@ function randomQuote()
   }
   return selectedQuoteObj;
 }//end function randomQuote
+$('#quoteSubmissionForm').submit(function () {
+ formThanks();
+ return false;
+});
 
+function formThanks() {
+
+ $( "#quoteSubmissionForm" ).fadeOut( "slow", function() {
+    // Animation complete.
+  });
+ //$("#quoteSubmissionForm").css("visibility","hidden");
+ $("#successMessage").text("Thank you for your quote submission! We'll review and get back to you as soon as we can.").fadeIn("slow", function() {});
+}
 //print copyright date in footer
 $('#footer-date').text("Copyright " + new Date().getFullYear());

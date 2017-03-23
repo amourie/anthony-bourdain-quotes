@@ -27,36 +27,35 @@
   <body>
 <header class="bs-docs-nav navbar navbar-static-top" id="top">
   <div class="container-fullwidth">
+      <div class="navbar-header">
+       <p class="header-icons">
+         <a href="https://twitter.com/Bourdain" target="_blank"><i class="fa fa-twitter fa-1" aria-hidden="true"></i></a>
+         <a href="https://www.facebook.com/AnthonyBourdain" target="_blank"><i class="fa fa-facebook fa-1" aria-hidden="true"></i></a>
+         <a href="https://www.instagram.com/anthonybourdain/" target="_blank"><i class="fa fa-instagram fa-1" aria-hidden="true"></i></a>
+       </p>
+       <p class="header-intro">The infinite wisdom that is Anthony Bourdain</p>
+     </div>
+  </div>
+</header>
 
-    <div class="navbar-header">
-
-     <p class="header-icons">
-       <a href="https://twitter.com/Bourdain" target="_blank"><i class="fa fa-twitter fa-1" aria-hidden="true"></i></a>
-       <a href="https://www.facebook.com/AnthonyBourdain" target="_blank"><i class="fa fa-facebook fa-1" aria-hidden="true"></i></a>
-       <a href="https://www.instagram.com/anthonybourdain/" target="_blank"><i class="fa fa-instagram fa-1" aria-hidden="true"></i></a>
-     </p>
- <p class="header-intro">The infinite wisdom that is Anthony Bourdain</p>
-  </div> </header>
-
-  <!-- Section: intro -->
-    <section id="intro" class="intro">
-
+<div class="divider"></div>
+<!-- Section: intro -->
+<section id="intro" class="intro">
 		<div class="intro-text">
-			<h2>Anthony Bourdain</span> </h2>
+			<h2>Anthony Bourdain</h2>
 			<h4>Because life is far more interesting when we all share in the infinite wisdom that is Anthony Bourdain...</h4>
-
       <div class="page-scroll">
-			<a href="#quotes" class="btn btn-circle">
-
-        <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
-
-			</a>
-		</div>
-		    </section>
+  			<a href="#quotes" class="btn btn-circle">
+          <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+  			</a>
+		  </div>
+    </div>
+</section>
 	<!-- /Section: intro -->
+  <div class="divider"></div>
   <!-- Section: quotes -->
 <section  id="quotes">
-    <h2>Random quotes by Anthony Bourdain</span> </h2>
+    <h2>Random quotes by Anthony Bourdain</h2>
         <button id="loadQuoteButton" class="generalButton">More quotes by Anthony Bourdain</button>
             <div id="quote-box">
               <div class="quoteElements">
@@ -66,20 +65,22 @@
 
             </div>
             <div id="quote-disclaimer" class="quoteDisclaimer">
-              <p>Disclaimer:
+              <p>Disclaimer:  </p>
               <ul>
                 <li>The author of this website may not necessarily agree with any of these quotes, but does find it both entertaining and amusing. Hoping you'll do the same.</li>
-                <li>If you feel so inclined, share with us your own Anthony Bourdain "pearls of wisdom". We love to grow our collection of pearls!
-                <li>Quotes obtained from <a href="http://www.inc.com/kevin-daum/30-quotes-from-anthony-bourdain-on-making-your-life-a-fulfilling-adventure.html">inc.com</a>
-                </li>
+                <li>If you feel so inclined, share with us your own Anthony Bourdain "pearls of wisdom". We love to grow our collection of pearls!</li>
+                <li>Quotes obtained from <a href="http://www.inc.com/kevin-daum/30-quotes-from-anthony-bourdain-on-making-your-life-a-fulfilling-adventure.html">inc.com</a></li>
+
               </ul>
-                </p>
+
             </div>
 </section>
 <!-- /Section: quotes -->
+
+<div class="divider"></div>
 <!-- Section: contact -->
 <section id="contact" >
-    <div class="container" class="text-center">
+    <div class="container text-center">
       <div class="row">
           <div class="col-lg-12">
                 <h2>Submit your Anthony Bourdain quote!</h2>
@@ -94,9 +95,9 @@
       <div class="col-lg-12">
           <div class="form-box">
 
-                <div id="successMessage"></div>
+                <div id="successMessage" class="quoteCopy"></div>
                 <div id="errorMessage"></div>
-                <form id="quoteSubmissionForm" action="" method="post" role="form">
+                <form id="quoteSubmissionForm"  method="post" onsubmit="return formThanks()" >
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -113,19 +114,19 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="citation">Citation</label>
-                                            <input type="text" class="form-control" name="citation" id="subject" placeholder=" e.g. Times New Delhi" data-rule="minlen:4" data-msg="Please enter a citation" />
+                                            <input type="text" class="form-control" name="citation" id="citation" placeholder=" e.g. Times New Delhi" data-rule="minlen:4" data-msg="Please enter a citation" />
                                             <div class="validation"></div>
                                     </div>
                                     <div class="form-group">
                                         <label for="year">Year</label>
-                                            <input type="text" class="form-control" name="year" id="subject" placeholder="e.g. 2015" data-rule="minlen:4" data-msg="Please enter a year" />
+                                            <input type="text" class="form-control" name="year" id="year" placeholder="e.g. 2015" data-rule="minlen:4" data-msg="Please enter a year" />
                                             <div class="validation"></div>
                                     </div>
                                 </div><!-- //col-md-4 -->
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="quote">Quote</label>
-                                          <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please enter quote here" placeholder="Quote"></textarea>
+                                          <textarea class="form-control" name="quote" id="quote" rows="10" data-rule="required" data-msg="Please enter quote here" placeholder="Quote"></textarea>
                                           <div class="validation"></div>
                                     </div>
                                 </div>
@@ -143,14 +144,18 @@
  </div> <!-- /row -->
  </div><!-- /container -->
 </section>
-
+<div class="divider"></div>
 
 <footer class="footer">
   <div>
-      <p class="footer-credit"><a href="www.littlecodemonster.com">www.littlecodemonster.com</a>
+      <p class="footer-credit"><a href="www.littlecodemonster.com" target="_blank">www.littlecodemonster.com</a>
       <p id="footer-date"></p>
   </div>
 </footer>
+
+
+<div class="intro">
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
