@@ -153,7 +153,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
   font-size: 20px;
   text-align: center;
   position: absolute;
-  bottom: 10%;s
+  bottom: 10%;
+  display: none;
 }
 .page-scroll a.btn-circle:hover {
   opacity: 0.8;
@@ -297,10 +298,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
       .background-intro{
         background-size: 100%;
       }
-      .page-scroll a.btn-circle {
-        display: none;
-        visibility: hidden;
-      }
 
       .intro .intro-text h2 {
         font-size: 1.1em;
@@ -345,6 +342,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
       section h2 {
           font-size: 2.3em;
       }
+      
+
     }
 
 
