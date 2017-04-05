@@ -277,7 +277,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
         .intro .intro-text h4 {
           font-size: 0.4em;
           width: 50%;
-          margin-left: 0.5em;
+          margin-left: 1.5em;
+          text-align: left;
         }
         .background-intro {
           background-position: center center;
@@ -300,11 +301,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
       }
 
       .intro .intro-text h2 {
-        font-size: 1.1em;
+        font-size: 1em;
         position: absolute;
         left: 15%;
         white-space: nowrap;
-        top: 15%;
+        top: 13%;
       }
       .intro .intro-text h4 {
         font-size: 0.4em;
@@ -313,7 +314,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
         margin-left: 0.5em;
         position: absolute;
         left: 15%;
-        top: 45%;
+        top: 47%;
         width: 50%;
         text-align: left;
       }
@@ -342,7 +343,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6174', end
       section h2 {
           font-size: 2.3em;
       }
-      
+
 
     }
 
